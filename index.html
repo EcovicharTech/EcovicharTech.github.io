@@ -43,11 +43,43 @@
                     place for the present and future generations.</p>
                 <a href="#services" class="btn btn-primary" style="margin-top: 2rem;">Explore Our Work</a>
             </div>
-            <!-- Optional graphic positioning logic -->
+            <!-- Interactive Flywheel Graphic -->
             <div class="hero-graphic"
-                style="position: absolute; right: 5%; bottom: 10%; width: 45%; max-width: 500px; z-index: 1; opacity: 0.8; mix-blend-mode: screen;">
-                <img src="material/Flywheel.png" alt="Flywheel Graphic"
-                    style="width: 100%; height: auto; animation: float 12s infinite ease-in-out alternate;">
+                style="position: absolute; right: 2%; top: 50%; transform: translateY(-50%); width: 45%; max-width: 500px; z-index: 1; display: flex; justify-content: center; align-items: center;">
+                <div class="flywheel-wrapper">
+                    <div class="flywheel-container" id="flywheel">
+                        <svg class="flywheel-svg" viewBox="0 0 400 400">
+                            <!-- Dashed circle connecting nodes -->
+                            <circle cx="200" cy="200" r="160" fill="none" stroke="rgba(255, 255, 255, 0.3)"
+                                stroke-width="2" stroke-dasharray="8 8" />
+                        </svg>
+
+                        <div class="flywheel-center">
+                            <i class="fa-solid fa-leaf"
+                                style="font-size: 1.8rem; color: var(--color-accent); margin-bottom: 2px;"></i>
+                            <span style="font-size:0.8rem; color: var(--color-primary); font-weight:700;">ESG</span>
+                        </div>
+
+                        <div class="flywheel-node">
+                            <div class="node-content">Developing a<br>framework<br>of ESG</div>
+                        </div>
+                        <div class="flywheel-node">
+                            <div class="node-content">Implementing<br>ESMS System or<br>specific elements<br>(HSE, CSR)
+                            </div>
+                        </div>
+                        <div class="flywheel-node">
+                            <div class="node-content">KPI identification,<br>monitoring &<br>reporting,<br>Carbon
+                                footprint</div>
+                        </div>
+                        <div class="flywheel-node">
+                            <div class="node-content">Supplier/Community<br>Awareness,<br>Hand holding,<br>Training &
+                                Audit</div>
+                        </div>
+                        <div class="flywheel-node">
+                            <div class="node-content">Assessment, due<br>diligence & Gap<br>Identification</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

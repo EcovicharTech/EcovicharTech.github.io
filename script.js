@@ -29,4 +29,30 @@ document.addEventListener('DOMContentLoaded', () => {
             navbar.style.boxShadow = '0 8px 32px 0 rgba(31, 38, 135, 0.07)';
         }
     });
+
+    // Flywheel Positioning Logic
+    const nodes = document.querySelectorAll('.flywheel-node');
+    if (nodes.length > 0) {
+        const positionNodes = () => {
+            const isMobile = window.innerWidth <= 768;
+            const radius = isMobile ? 120 : 160;
+            const totalNodes = nodes.length;
+            let currentAngle = -90; // Start at top
+
+            nodes.forEach((node) => {
+                const angleRad = currentAngle * (Math.PI / 180);
+                const x = Math.cos(angleRad) * radius;
+                const y = Math.sin(angleRad) * radius;
+
+                node.style.setProperty('--tx', `${x}px`);
+                node.style.setProperty('--ty', `${y}px`);
+                node.style.transform = `translate(${x}px, ${y}px)`;
+
+                currentAngle += (360 / totalNodes);
+            });
+        };
+
+        positionNodes();
+        window.addEventListener('resize', positionNodes);
+    }
 });
